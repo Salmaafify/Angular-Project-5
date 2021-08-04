@@ -1,0 +1,36 @@
+<div class="row col-12 m-auto">
+    <table class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col" rowspan="2">#</th>
+            <th scope="col" rowspan="2">Name</th>
+            <th scope="col" rowspan="2">UserName</th>
+            <th scope="col" rowspan="2">Email</th>
+            <th scope="col" class="" colspan="3" class="taxt-center">Address</th>
+            <th scope="col" rowspan="2">Phone</th>
+            <th scope="col" rowspan="2">WebSite</th>
+            <th scope="col" rowspan="2">Details</th>
+          </tr>
+          <tr>
+              <th>Street</th>
+              <th>Suite</th>
+              <th>City</th>
+          </tr>
+        </thead>
+        <tbody class="table-danger">
+          <tr *ngFor="let s of users;">  
+              <!-- *ngFor="let s of users;" -->
+            <th>{{s.id}}</th>
+            <td>{{s.name}}</td>
+            <td>{{s.username}}</td>
+            <td>{{s.email}}</td>
+            <td>{{s.address.street}}</td> 
+            <td>{{s.address.suite}}</td>
+            <td>{{s.address.city}}</td>
+            <td>{{s.phone}}</td>
+            <td>{{s.website}}</td>
+            <td><a routerLink="{{s.id}}">Details</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

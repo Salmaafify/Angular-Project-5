@@ -1,0 +1,24 @@
+<h1 style="color: cadetblue;">That Is {{user.name}} Details</h1>
+
+<div class="card text-white bg-danger mt-5 m-auto" style="width: 40rem;">
+    <div class="card-header">
+       <h1> {{user.name}}</h1>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><h3 class="text-danger">UserName :- </h3>{{user.username}}</li>
+      <li class="list-group-item"><h3 class="text-danger">Email :- </h3><a>{{user.email}}</a></li>
+      <li class="list-group-item"><h3 class="text-danger">Phone :- </h3>{{user.phone}}</li>
+      <li class="list-group-item"><h3 class="text-danger">WebSite :- </h3><a>{{user.website}}</a></li>
+      <li class="list-group-item"><h3 class="text-danger">Address :- </h3>{{user.address.street}} , {{user.address.suite}} ,{{user.address.city}} ,{{user.address.zipcode}}</li>
+      <li class="list-group-item"><h3 class="text-danger">Company :- </h3>
+        <h5 class="text-success">Company Name :- </h5>{{user.company.name}},
+        <h5 class="text-success">Company Catch Phrase :- </h5>{{user.company.catchPhrase}},
+        <h5 class="text-success">Company Bs :- </h5>{{user.company.bs}},
+    </li>
+    </ul>
+  </div>
+<br>
+<br>
+  <button type="button" class="btn btn-danger btn-lg d-block m-auto" routerLink="">Back</button>
+  <br>
+  <br>
